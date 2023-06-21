@@ -7,11 +7,12 @@ To run the code locally, first launch Apache.
 I used Sass to write the style code. So, first of all install sass with npm:
 
 ```bash
-npm i sass -g
+sudo npm i sass -g
 ```
 
 Then, move to 'styles' folder and run:
 ```bash
+cd styles
 sass --watch style.scss:style.css
 ```
 

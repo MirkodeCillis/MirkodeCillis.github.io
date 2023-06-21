@@ -1,24 +1,27 @@
 $('#form-contact').submit( function() {
+    const email = $('#email'),
+        subject = $('#subject'),
+        object = $('#object');
     let error=false;
-    if($('#email')[0].value === '') {
+    if(email[0].value === '') {
         error = true;
-        $('#email').css('border-color', 'red');
+        email.css('border-color', 'red');
     }
-    if($('#subject')[0].value === '') {
+    if(subject[0].value === '') {
         error = true;
-        $('#subject').css('border-color', 'red');
+        subject.css('border-color', 'red');
     }
-    if($('#object')[0].value === '') {
+    if(object[0].value === '') {
         error = true;
-        $('#object').css('border-color', 'red');
+        object.css('border-color', 'red');
     }
     if(error) {
         alert("Completare tutti i campi.");
     } else {
-        $.post('../mail.php', {
-            email: $('#email')[0].value,
-            subject: $('#subject')[0].value,
-            object: $('#object')[0].value
+        $.post('/mail.php', {
+            email: email[0].value,
+            subject: subject[0].value,
+            object: object[0].value
         });
         alert('L\'email è stata inviata correttamente.');
     }
