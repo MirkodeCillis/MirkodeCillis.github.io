@@ -58,7 +58,7 @@ span.project-name {
     font-size: 2em;
     font-weight: bold;
     color: var(--white);
-    font-family: "Sailec-Medium", 'Poppins', 'Comfortaa', arial;
+    font-family: "Sailec-Medium", 'Poppins', 'Comfortaa', arial, serif;
 }
 .proj-descr {
     height: calc(100% - 50px);
@@ -68,23 +68,20 @@ span.project-name {
     transform: translateY(-100%) scale(2);
     opacity: 0;
     transition-duration: .6s;
-    transition-delay: 0;
-    -webkit-transform: translateY(-100%) scale(2);
+    transition-delay: 0s;
     -webkit-transition-duration: .6s;
-    -webkit-transition-delay: 0;
+    -webkit-transition-delay: 0s;
 }
 .proj-descr p { margin: .4em 0; }
 .project:hover .front {
     transform: scale(2);
-    transition-delay: 0;
-    -webkit-transform: scale(2);
-    -webkit-transition-delay: 0;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
     opacity: 0;
 }
 .project:hover .proj-descr {
     transform: translateY(-100%) scale(1);
     transition-delay: .2s;
-    -webkit-transform: translateY(-100%) scale(1);
     -webkit-transition-delay: .2s;
     opacity: 1;
 }
@@ -113,14 +110,12 @@ button.link-button {
     background-color: rgba(0,0,0,0.4);
     transform: scale(0.0001);
     transition: all .4s linear, opacity 3s linear;
-    -webkit-transform: scale(0.0001);
     -webkit-transition: all .4s linear, opacity 3s linear;
 }
 .show-modal {
     opacity: 1;
     transform: scale(1);
     transition: all .6s linear, opacity .01s linear;
-    -webkit-transform: scale(1);
     -webkit-transition: all .6s linear, opacity .01s linear;
 }
 .modal-content {
@@ -129,8 +124,7 @@ button.link-button {
     border-radius: 5px;
     background-color: var(--bg-color);
     color: var(--font-color);
-    margin: auto;
-    margin-top: 25%;
+    margin: 25% auto auto;
     width: 80%;  
     max-height: 0.1px;
     overflow-y: auto;
@@ -192,7 +186,6 @@ figure.proj-figure.modal-figure { cursor: zoom-out; }
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
     width: max-content;
     max-height: 95%;
 }

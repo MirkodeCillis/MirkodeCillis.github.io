@@ -13,7 +13,6 @@
     position: relative;
     margin: 2em;
     transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);;
 }
 .photo-content {
     width: 300px; height: 300px;
@@ -38,11 +37,9 @@
     top: 8px; left: 8px; right: 8px; bottom: 8px;
     border: 4px solid white; 
     transform: translateZ(100px);
-    -webkit-transform: translateZ(100px);
 }
 .photo-back {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
     background-color: #313131;
 }
 .photo-back-body {
@@ -51,9 +48,10 @@
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) translateZ(100px);
-    -webkit-transform: translate(-50%, -50%) translateZ(100px);
 }
-.photo-container:hover .photo-content { transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+.photo-container:hover .photo-content {
+    transform: rotateY(180deg);
+}
 
 /*  =================================================
     ------------------ Description ------------------
@@ -77,11 +75,9 @@ p.descr-lists {
 .tooltip { 
     position: relative; 
     transform: scale(0);
-    -webkit-transform: scale(0);
 }
 .tooltip .tooltiptext {
     opacity: 0;
-    width: 120px;
     background-color: var(--font-color);
     color: var(--bg-color);
     text-align: center;
@@ -129,7 +125,6 @@ p.descr-lists {
 .come-in #my-description p {
     transform: translateX(110%);
     animation: come-in 1s ease-out forwards;
-    -webkit-transform: translateX(110%);
     -webkit-animation: come-in 1s ease-out forwards;
 }
 .come-in #my-description h5 { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }

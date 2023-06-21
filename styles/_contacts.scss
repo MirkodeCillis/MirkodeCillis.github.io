@@ -21,7 +21,7 @@
     color: rgba(255, 255, 255, 0.75);
 }
 
-icon:hover{
+.icon:hover {
     color: white;
     -webkit-filter: drop-shadow(0 0 0.5px white);
     filter: drop-shadow(0 0 0.5px white);
@@ -34,7 +34,6 @@ icon:hover{
     top: calc(50% - 13px);
     left: 50%; 
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
     fill: rgba(255, 255, 255, 0.75);
     transition: all 0.3s linear;
     -webkit-transition: all 0.3s linear;

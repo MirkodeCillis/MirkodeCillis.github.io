@@ -33,7 +33,6 @@
   background-color: var(--bg-color);
   border-radius: 15px;
   transform: translate3d(-75%, 0, 0);
-  -webkit-transform: translate3d(-75%, 0, 0);
   transition: transform 0.6s cubic-bezier(0.85, 0.05, 0.18, 1.35), background-color 1s linear;
   -webkit-transition: transform 0.6s cubic-bezier(0.85, 0.05, 0.18, 1.35), background-color 1s linear;
   box-shadow: -8px -4px 8px 0px #404040, 8px 4px 12px 0px #2b2b2b; }
@@ -49,8 +48,7 @@
   fill: var(--font-color); }
 
 .toggle-state:checked ~ .indicator {
-  transform: translate3d(25%, 0, 0);
-  -webkit-transform: translate3d(25%, 0, 0); }
+  transform: translate3d(25%, 0, 0); }
 
 /*  =================================================
     -------------------- Header ---------------------
@@ -90,7 +88,6 @@ header {
   border-radius: 0 0 5px 5px;
   background-color: #3b3b3b;
   transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
   opacity: 0;
   padding: 0;
   list-style-type: none;
@@ -101,8 +98,7 @@ header {
 
 .lang-container:hover ul {
   opacity: 1;
-  transform: translateY(-5px);
-  -webkit-transform: translateY(-5px); }
+  transform: translateY(-5px); }
 
 /*  =================================================
     --------------------- Footer --------------------
@@ -174,7 +170,6 @@ input:hover, textarea:hover {
 label.footer {
   padding-left: 10px;
   transform: translate(4px, -8px);
-  -webkit-transform: translate(4px, -8px);
   margin-bottom: 2px;
   cursor: text;
   transform-origin: left top;
@@ -195,8 +190,7 @@ textarea:focus ~ label.footer {
   z-index: 1;
   background-color: #3b3b3b;
   transform: translate(12px, -20px) scale(0.8);
-  -webkit-transform: translate(12px, -20px) scale(0.8);
-  padding-left: 0px; }
+  padding-left: 0; }
 
 input::placeholder, textarea::placeholder {
   opacity: 0; }
@@ -237,7 +231,7 @@ input::placeholder, textarea::placeholder {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.75); }
 
-icon:hover {
+.icon:hover {
   color: white;
   -webkit-filter: drop-shadow(0 0 0.5px white);
   filter: drop-shadow(0 0 0.5px white); }
@@ -249,7 +243,6 @@ icon:hover {
   top: calc(50% - 13px);
   left: 50%;
   transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
   fill: rgba(255, 255, 255, 0.75);
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear; }
@@ -323,7 +316,7 @@ h6 {
   background-image: linear-gradient(var(--primary-color), var(--primary-color));
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 0% 100%;
+  background-size: 0 100%;
   transition: background-size .4s ease-out, color .6s linear;
   -webkit-transition: background-size .4s ease-out, color .6s linear; }
 
@@ -346,8 +339,7 @@ h6 {
   -webkit-user-select: none;
   position: relative;
   margin: 2em;
-  transform: translateX(-200%);
-  -webkit-transform: translateX(-200%); }
+  transform: translateX(-200%); }
 
 .photo-content {
   width: 300px;
@@ -381,12 +373,10 @@ h6 {
   right: 8px;
   bottom: 8px;
   border: 4px solid white;
-  transform: translateZ(100px);
-  -webkit-transform: translateZ(100px); }
+  transform: translateZ(100px); }
 
 .photo-back {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
   background-color: #313131; }
 
 .photo-back-body {
@@ -395,12 +385,10 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateZ(100px);
-  -webkit-transform: translate(-50%, -50%) translateZ(100px); }
+  transform: translate(-50%, -50%) translateZ(100px); }
 
 .photo-container:hover .photo-content {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); }
+  transform: rotateY(180deg); }
 
 /*  =================================================
     ------------------ Description ------------------
@@ -424,12 +412,10 @@ p.descr-lists {
 
 .tooltip {
   position: relative;
-  transform: scale(0);
-  -webkit-transform: scale(0); }
+  transform: scale(0); }
 
 .tooltip .tooltiptext {
   opacity: 0;
-  width: 120px;
   background-color: var(--font-color);
   color: var(--bg-color);
   text-align: center;
@@ -483,7 +469,6 @@ p.descr-lists {
 .come-in #my-description p {
   transform: translateX(110%);
   animation: come-in 1s ease-out forwards;
-  -webkit-transform: translateX(110%);
   -webkit-animation: come-in 1s ease-out forwards; }
 
 .come-in #my-description h5 {
@@ -583,7 +568,7 @@ span.project-name {
   font-size: 2em;
   font-weight: bold;
   color: var(--white);
-  font-family: "Sailec-Medium", 'Poppins', 'Comfortaa', arial; }
+  font-family: "Sailec-Medium", 'Poppins', 'Comfortaa', arial, serif; }
 
 .proj-descr {
   height: calc(100% - 50px);
@@ -593,25 +578,22 @@ span.project-name {
   transform: translateY(-100%) scale(2);
   opacity: 0;
   transition-duration: .6s;
-  transition-delay: 0;
-  -webkit-transform: translateY(-100%) scale(2);
+  transition-delay: 0s;
   -webkit-transition-duration: .6s;
-  -webkit-transition-delay: 0; }
+  -webkit-transition-delay: 0s; }
 
 .proj-descr p {
   margin: .4em 0; }
 
 .project:hover .front {
   transform: scale(2);
-  transition-delay: 0;
-  -webkit-transform: scale(2);
-  -webkit-transition-delay: 0;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
   opacity: 0; }
 
 .project:hover .proj-descr {
   transform: translateY(-100%) scale(1);
   transition-delay: .2s;
-  -webkit-transform: translateY(-100%) scale(1);
   -webkit-transition-delay: .2s;
   opacity: 1; }
 
@@ -640,14 +622,12 @@ button.link-button {
   background-color: rgba(0, 0, 0, 0.4);
   transform: scale(0.0001);
   transition: all .4s linear, opacity 3s linear;
-  -webkit-transform: scale(0.0001);
   -webkit-transition: all .4s linear, opacity 3s linear; }
 
 .show-modal {
   opacity: 1;
   transform: scale(1);
   transition: all .6s linear, opacity .01s linear;
-  -webkit-transform: scale(1);
   -webkit-transition: all .6s linear, opacity .01s linear; }
 
 .modal-content {
@@ -656,8 +636,7 @@ button.link-button {
   border-radius: 5px;
   background-color: var(--bg-color);
   color: var(--font-color);
-  margin: auto;
-  margin-top: 25%;
+  margin: 25% auto auto;
   width: 80%;
   max-height: 0.1px;
   overflow-y: auto;
@@ -721,7 +700,6 @@ figure.proj-figure.modal-figure {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   width: max-content;
   max-height: 95%; }
 
@@ -799,7 +777,7 @@ figure.proj-figure.modal-figure {
         height: 100%;
         background: #f6a4c3;
         position: absolute;
-        top: 0%;
+        top: 0;
         left: 50%;
         right: auto;
         z-index: -1;
@@ -861,7 +839,7 @@ figure.proj-figure.modal-figure {
         height: 100%;
         background: #f6a4c3;
         position: absolute;
-        top: 0%;
+        top: 0;
         z-index: -1;
         left: 50%;
         transform: translateX(-50%);
@@ -872,7 +850,7 @@ figure.proj-figure.modal-figure {
         height: 2px;
         background: #f6a4c3;
         position: absolute;
-        left: 0%;
+        left: 0;
         z-index: -1;
         top: 50%;
         transform: translateY(-50%);
@@ -944,7 +922,7 @@ figure.proj-figure.modal-figure {
         height: 100%;
         background: #f6a4c3;
         position: absolute;
-        top: 0%;
+        top: 0;
         z-index: -1;
         left: 50%;
         transform: translateX(-50%);
@@ -993,8 +971,7 @@ figure.proj-figure.modal-figure {
     grid-template-columns: 100%; }
 
   .parallax div {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9); }
+    transform: scale(0.9); }
 
   .parallax#projects div {
     top: calc(50% - 6em); }
@@ -1081,7 +1058,6 @@ figure.proj-figure.modal-figure {
   .switch {
     z-index: 100;
     transform: scale(0.9);
-    -webkit-transform: scale(0.9);
     padding: 10px 15px 15px 15px;
     position: fixed;
     right: -15px;
@@ -1092,7 +1068,6 @@ figure.proj-figure.modal-figure {
 
   code {
     transform: scale(0.8);
-    -webkit-transform: scale(0.8);
     position: relative;
     left: -40px; }
 
@@ -1108,7 +1083,6 @@ figure.proj-figure.modal-figure {
 @media screen and (max-width: 500px) {
   code {
     transform: scale(0.6);
-    -webkit-transform: scale(0.6);
     left: -20%; } }
 @media screen and (max-width: 457px) {
   header .logo {
@@ -1135,7 +1109,6 @@ body {
   font-family: 'Comfortaa', cursive;
   text-align: justify;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   transition: all 0.6s linear;
   -webkit-transition: all 0.6s linear; }
 
@@ -1161,7 +1134,7 @@ span.highlight {
   background-image: linear-gradient(var(--font-color), var(--font-color));
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 0% 100%;
+  background-size: 0 100%;
   transition: all 1s linear;
   -webkit-transition: all 1s linear; }
 
@@ -1207,8 +1180,7 @@ h2 {
   font-size: 3em; }
 
 h1:hover, h2:hover {
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15); }
+  transform: scale(1.15); }
 
 .flex {
   display: flex; }
@@ -1264,11 +1236,6 @@ h1:hover, h2:hover {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg); } }
 @keyframes come-in {
   to {
     opacity: 1;
@@ -1276,13 +1243,6 @@ h1:hover, h2:hover {
 @keyframes rise {
   to {
     transform: scale(1); } }
-@-webkit-keyframes come-in {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0); } }
-@keyframes rise {
-  to {
-    -webkit-transform: scale(1); } }
 @font-face {
   font-family: "Sailec-Medium";
   src: url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.eot");
