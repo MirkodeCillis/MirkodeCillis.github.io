@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*  =================================================
+    ------------------- Imports ---------------------
+    ================================================= */
+@import '_switch.scss';
+@import '_head_foot.scss';
+@import '_contacts.scss';
+@import '_start.scss';
+@import '_about.scss';
+@import '_projects.scss';
+@import '_jobs.scss';
+@import '_responsive.scss';
+
+/*  =================================================
+    ---------------- General Settings ---------------
+    ================================================= */
+:root {
+    --black: rgb(32, 32, 32);
+    --white: rgb(236, 236, 236);
+    --primary-light: rgb(83, 134, 134);
+    --primary-dark: #59a96a;
+    --job-light: #ddd;
+    --job-dark: #3b3b3b;
+}
+html { scroll-behavior: smooth; }
+body{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    text-align: justify;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: all 0.6s linear;
+    -webkit-transition: all 0.6s linear;
+}
+*::selection { color: var(--bg-color); background-color: var(--primary-color);}
+section {
+    padding: 30px 5%;
+    width: 90%;
+    text-align: justify;
+    margin: -0.05em auto;
+}
+span.highlight { color: var(--primary-color); }
+.separator {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-image: linear-gradient(var(--font-color), var(--font-color));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+.separator.appear {
+    background-size: 100% 100%;
+}
+.parallax {
+    overflow: hidden;
+    margin: -0.05em auto;
+    height: 60vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.parallax div {
+    margin: 0 auto;
+    position: relative;
+}
+h5 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+h4 { font-size: 1.5em; }
+h1, h2 {
+    text-align: center;
+    margin: auto;
+    color: var(--white);
+    font-family: "Sailec-Medium", 'Poppins', 'Comfortaa', sans-serif;
+    transition: all .6s linear;
+    -webkit-transition: all .6s linear;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h1:hover, h2:hover {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+}
+.flex { display: flex; }
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    align-items: initial;
+    width: 90%;
+    margin: auto;
+}
+.grid * { justify-self: center; }
+/*  =================================================
+    ---------------- Light Settings -----------------
+    ================================================= */
+[data-theme="light"] {
+    --bg-color: var(--white);
+    --font-color: var(--black);
+    --primary-color: var(--primary-light);
+    --secondary-color: var(--primary-dark);
+    --job-bg: var(--job-light);
+}
+
+/*  =================================================
+    ---------------- Dark Settings ------------------
+    ================================================= */
+[data-theme="dark"] {
+    --bg-color: var(--black);
+    --font-color: var(--white);
+    --primary-color: var(--primary-dark);
+    --secondary-color: var(--primary-light);
+    --job-bg: var(--job-dark);
+}
+
+/*  =================================================
+    -------------------- Loader ---------------------
+    ================================================= */
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 16px solid transparent; 
+    border-top: 16px solid var(--primary-color); 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes come-in {
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes rise {
+    to { transform: scale(1); }
+}
+@-webkit-keyframes come-in {
+    to { opacity: 1; -webkit-transform: translateX(0); }
+}
+@keyframes rise {
+    to { -webkit-transform: scale(1); }
+}
+
+@font-face {font-family: "Sailec-Medium";
+    src: url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/ac9525e5f200f57332b3080d0db9d8f6.svg#Sailec-Medium") format("svg"); /* iOS 4.1- */
+};

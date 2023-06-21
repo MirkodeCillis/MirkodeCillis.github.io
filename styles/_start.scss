@@ -1,0 +1,68 @@
+/*  =================================================
+    ----------------  #start section ----------------
+    ================================================= */
+#start { min-height: 100vh; }
+code {
+    position: relative;
+    transition: background-color 0.6s linear, color .6s linear;
+    -webkit-transition: background-color 0.6s linear, color .6s linear;
+    height: min-content;
+    min-width: 35em;
+    min-height: 20em;
+    user-select: none;
+    -webkit-user-select: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+.code {
+    margin: auto;
+    width: min-content;
+    font-size: 1.4em;
+}
+#cursor {
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+}
+.code-btn-container {
+    width: min-content;
+    user-select: none;
+    -webkit-user-select: none;
+    margin: auto;
+    margin-top: 2em;
+}
+.link-button {
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid var(--font-color);
+    color: var(--font-color);
+    opacity: .75;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+}
+h6 {
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+}
+.link-button:hover { opacity: 1; }
+#link-about, .link-button  {
+    display: block; 
+    text-decoration: none;
+    width: max-content;
+    min-width: 150px;
+}
+.link-button-bg {
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .4s ease-out, color .6s linear;
+    -webkit-transition: background-size .4s ease-out, color .6s linear;
+}
+.link-button-bg:hover {
+    background-size: 100% 100%;
+    color: white;
+}

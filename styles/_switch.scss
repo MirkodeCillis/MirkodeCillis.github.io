@@ -1,0 +1,55 @@
+/*  =================================================
+    --------------- Dark-Light Switch ---------------
+    ================================================= */
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.switch {
+    position: absolute;
+    right: 5%;
+}
+.toggle {
+    isolation: isolate;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+        -8px -4px 8px 0px #404040,
+        8px 2px 12px 0px #2b2b2b,
+        4px 4px 4px 0px #2b2b2b inset,
+        -4px -4px 4px 0px #404040 inset;
+}
+
+.toggle-state { display: none; }
+
+.indicator {
+    height: 100%;
+    width: 200%;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    -webkit-transform: translate3d(-75%, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.85, 0.05, 0.18, 1.35), background-color 1s linear;
+    -webkit-transition: transform 0.6s cubic-bezier(0.85, 0.05, 0.18, 1.35), background-color 1s linear;
+    box-shadow:
+        -8px -4px 8px 0px #404040,
+        8px 4px 12px 0px #2b2b2b;
+}
+.indicator svg {
+    position: relative;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    height: 20px;
+    width: 20px;
+    transition: fill 3s linear, left 3s linear;
+    -webkit-transition: fill 3s linear, left 3s linear;
+    fill: var(--font-color);
+}
+.toggle-state:checked ~ .indicator {
+    transform: translate3d(25%, 0, 0);
+    -webkit-transform: translate3d(25%, 0, 0);
+}

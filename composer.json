@@ -1,0 +1,7 @@
+{
+    "name": "mdc/portfolio",
+    "description": "My portfolio website, including phpmailer.",
+    "require": {
+        "phpmailer/phpmailer": "~6.1"
+    }
+}

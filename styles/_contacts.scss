@@ -1,0 +1,46 @@
+/*  =================================================
+    ------------------- Contacts --------------------
+    ================================================= */
+.contacts-label { display: none; }
+.contacts {
+    position: absolute;
+    right: calc(5% + 100px);
+    top: -5px;
+}
+.contact-links {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    margin: 8px;
+    display: block;
+    overflow: hidden;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+icon:hover{
+    color: white;
+    -webkit-filter: drop-shadow(0 0 0.5px white);
+    filter: drop-shadow(0 0 0.5px white);
+}
+
+.icon svg {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    top: calc(50% - 13px);
+    left: 50%; 
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    fill: rgba(255, 255, 255, 0.75);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+.icon svg:hover {
+    fill: white;
+    -webkit-filter: drop-shadow(0 0 0.5px white);
+    filter: drop-shadow(0 0 0.5px white);
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+        <title>Mirko de Cillis | Sviluppatore</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+        <link id="editor-theme" rel="stylesheet" href="../styles/darcula.css">
+        <script src="../scripts/onload.js"></script>
+        <script src="../scripts/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="../scripts/jquery.min.3.5.1.js"></script>
+        <script src="../scripts/jquery.visible.js"></script>
+        <script src="https://kit.fontawesome.com/dc444eafdd.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="onLoad()">
+        <div id="content">
+            <header>
+                <div class="lang-container">
+                    <img src="../img/it.png" alt="Ita">
+                    <ul>
+                        <li class="lang-item" id="en">
+                            <a href="../en/index.html">
+                                <img src="../img/en.png" alt="En">
+                            </a>
+                        </li>
+                        <li class="lang-item" id="it">
+                            <a href="../it/index.html">
+                                <img src="../img/it.png" alt="Ita">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    mirko de cillis
+                </div>
+                <div class="switch"> 
+                    <label class="label">
+                        <div class="toggle">
+                            <input class="toggle-state" type="checkbox" name="check" value="check" />
+                            <div class="indicator">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                
+            </header>
+            <section id="start">
+                <div class="code">
+                    <pre><code class="java" id="editor"></code></pre>
+                </div>
+                <div class="code-btn-container">
+                    <a id="link-about">
+                        <div class="link-button">
+                            <span>Sto Scrivendo...</span>
+                        </div>
+                    </a>
+                    <div>
+                        <h6> Aspetta o continua a scorrere&hellip;</h6>
+                    </div>
+                </div>
+            </section>
+            <div class="separator"></div>
+            <div class="parallax" id="about">
+                <div>
+                    <div>
+                        <h2>Mirko de Cillis</h2>
+                    </div>
+                    <div>
+                        <h1>SOFTWARE DEVELOPER</h1>
+                        <h1>WEB DEVELOPER</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <section>
+                <div class="flex about">
+                    <div class="photo-container">
+                        <div class="photo-content">
+                            <div class="photo-front">
+                                <img src="../img/myphoto.jpg" alt="Una mia foto.">
+                            </div>
+                            <div class="photo-back">
+                                <div class="photo-back-body">
+                                    <h4>Questo sono io.</h4>
+                                    <h4>Ho
+                                    <script>
+                                        let birthday = new Date(2002, 9-1, 20);
+                                        let ageDifMs = Date.now() - birthday.getTime();
+                                        let ageDate = new Date(ageDifMs); // miliseconds from epoch
+                                        document.write(Math.abs(ageDate.getUTCFullYear() - 1970).toString());
+                                    </script> anni.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="my-description">
+                        <h5>Mi presento</h5>
+                        <p class="grid about-paragraph">
+                            <i class="fa fa-university fa-2x" aria-hidden="true" style="color: var(--secondary-color)"></i>
+                            <span>
+                                Mi chiamo Mirko de Cillis, vengo da Trani e mi sono diplomato come <span class="highlight">perito informatico</span>
+                                all'ITIS "Jannuzzi" di Andria. Il voto finale? Non mi interessa, ma per vostra conoscenza,
+                                è 100. Attualmente frequente il Corso di Laurea Triennale in <span class="highlight">Ingegneria Gestionale</span>
+                                Politecnico di Bari.
+                            </span>
+                        </p>
+                        <p class="grid about-paragraph">
+                            <i class="fas fa-dumbbell fa-2x" style="color: var(--secondary-color)"></i>
+                            <span>
+                                Non mi fermo solo allo studio: ho ben altre passioni!
+                                Primo fra tutte, l'<span class="highlight">allenamento</span> è la cosa più importante per me: mi aiuta a scaricare la
+                                tensione tra studio e lavoro e mi fa sentire anche più energico. Sono stato un pugile
+                                agonista iscritto alla <span class="highlight">Federazione Pugilistica Italiana</span>, purtroppo senza mai aver disputato
+                                incontri (il mio pugile preferito? Rocky Marciano :D).
+                            </span>
+                        </p>
+                        <p class="grid about-paragraph">
+                            <i class="fa fa-line-chart fa-2x" aria-hidden="true" style="color: var(--secondary-color)"></i>
+                            <span>
+                                Sono uno sempre disposto a crescere e a <span class="highlight">imparare di continuo</span>, spesso e volentieri in più
+                                settori. Sono anche un appassionato di criptovalute e di <span class="highlight">investimenti</span>: la finanza
+                                decentralizzata è stata il tema che ho portato agli Esami di Stato e continuo a seguire l'argomento.
+                            </span>
+                        </p>
+                        <p class="grid about-paragraph">
+                            <i class="fa fa-lightbulb-o fa-2x" aria-hidden="true" style="color: var(--secondary-color)"></i>
+                            <span>
+                                Nonostante non abbia molta esperienza nel settore alle spalle, ho sempre svolto tutti i miei
+                                compiti con il <span class="highlight"> massimo impegno</span>, per ottenere sempre la soluzione migliore. Adoro le sfide
+                                e mi piace approfondire un argomento fino a quando non mi reputo soddifatto del
+                                risultato ottenuto; quando mi viene assegnato un compito faccio di
+                                tutto pur di portarlo al termine e ottenere la <span class="highlight"> soluzione migliore</span>.
+                            </span>
+                        </p>
+                        <div class="flex descr-lists">
+                            <div id="icon-grid">
+                                <p class="descr-lists">Linguaggi e framework che conosco</p>
+                                <div class="grid about" >
+                                    <div class="tooltip"><img src="../img/icons/html.svg" alt="HTML"><span class="tooltiptext">HTML</span></div>
+                                    <div class="tooltip"><img src="../img/icons/css.svg" alt="CSS"><span class="tooltiptext">CSS</span></div>
+                                    <div class="tooltip"><img src="../img/icons/js.svg" alt="JavaScript"><span class="tooltiptext">JavaScript</span></div>
+                                    <div class="tooltip"><img src="../img/icons/java.svg" alt="Java"> <span class="tooltiptext">Java</span></div>
+                                    <div class="tooltip"><img src="../img/icons/clanguage.svg" alt="C"><span class="tooltiptext">C</span></div>
+                                    <div class="tooltip"><img src="../img/icons/nodejs.svg" alt="NodeJS"><span class="tooltiptext">NodeJS</span></div>
+                                    <div class="tooltip"><img src="../img/icons/php.svg" alt="PHP"><span class="tooltiptext">PHP</span></div>
+                                    <div class="tooltip"><img src="../img/icons/mysql.svg" alt="MySQL"><span class="tooltiptext">MySQL</span></div>
+                                    <div class="tooltip"><img src="../img/icons/mongodb.svg" alt="MongoDB"><span class="tooltiptext">MongoDB</span></div>
+                                    <div class="tooltip"><img src="../img/icons/spring.svg" alt="Spring"><span class="tooltiptext">Spring</span></div>
+                                    <div class="tooltip"><img src="../img/icons/angularjs.svg" alt="AngularJS"><span class="tooltiptext">AngularJS</span></div>
+                                    <div class="tooltip"><img src="../img/icons/react.svg" alt="ReactJS"><span class="tooltiptext">ReactJS</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="icon-grid-2">
+                                    <p class="descr-lists">Strumenti di sviluppo</p>
+                                    <div class="grid about-2">
+                                        <div class="tooltip"><img src="../img/icons/intellij.svg" alt="IntelliJ Idea"><span class="tooltiptext">IntelliJ Idea</span></div>
+                                        <div class="tooltip"><img src="../img/icons/webstorm.svg" alt="WebStorm"><span class="tooltiptext">WebStorm</span></div>
+                                        <div class="tooltip"><img src="../img/icons/git.svg" alt="Git"><span class="tooltiptext">Git</span></div>
+                                    </div>
+                                </div>
+                                <div class="icon-grid-2">
+                                    <p class="descr-lists">Lavoro su</p>
+                                    <div class="grid about-2">
+                                        <div class="tooltip"><img src="../img/icons/windows.svg" alt="Windows"><span class="tooltiptext">Windows</span></div>
+                                        <div class="tooltip"><img src="../img/icons/linux.svg" alt="Linux"><span class="tooltiptext">Linux</span></div>
+                                        <div class="tooltip"><img src="../img/icons/macos.svg" alt="MacOS"><span class="tooltiptext">MacOS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            <div class="separator"></div>
+            <div class="parallax" id="projects">
+                <div>
+                    <div>
+                        <h1>I MIEI PROGETTI</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <section>
+                <div class="grid projects">
+                    <div class="project" id="odey">
+                        <div class="front">
+                            <span class="project-name">Odey</span>
+                        </div>
+                        <div class="proj-descr">
+                            <p style="text-align-last: center;">
+                                Esercitazione scolastica per la gestione dei corsi di recupero in una scuola 
+                                e generazione del calendario delle lezioni.
+                            </p>
+                            <p><span class="highlight">Data:</span> aprile 2020</p>
+                            <p><span class="highlight">Scritto in</span> Java</p>
+                            <div style="position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%)">
+                                <button class="link-button link-button-bg">Più Informazioni</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="odey-modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="flex">
+                                <div>
+                                    <h5>Odey</h5>
+                                    <p>
+                                        Odey è un programma per la gestione degli incontri dei corsi di recupero all'interno 
+                                        di una scuola. Alla segreteria basta creare un foglio di calcolo in cui inserire una 
+                                        lista di tutti gli studenti e le materie che devono recuperare. La generazione delle
+                                        classi, delle lezioni e del calendario viene fatta dal programma. Il calendario viene 
+                                        esportato su un foglio di calcolo, con le date e gli orari di ogni incontro.
+                                    </p>
+                                    <p>
+                                        Un docente che offre la propria disponibilità nell'insegnare nei corsi di recupero può 
+                                        registrarsi autonomamente. Il docente che terrà uno o più corsi potrà inoltre generare 
+                                        un foglio di calcolo con solo i suoi corsi.
+                                    </p>
+                                    <p>
+                                        Il programma nasce come esercitazione scolastica per la progettazione e lo sviluppo di una 
+                                        soluzione informatica in un team con ruoli e mansioni determinati. Nel nostro team, io 
+                                        ho assunto il ruolo di capo progetto e progettista.
+                                    </p>
+                                    <div class="modal-btn">
+                                        <a class="link-button link-button-bg" href="https://gitlab.com/tpsgroup/corsi-recupero" target="_blank">
+                                            <div>
+                                                <span>Progetto</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <figure class="proj-figure">
+                                        <img class="proj-figure" src="../img/odey_screen1.png" alt="Menù della segreteria">
+                                        <figcaption class="proj-figure">Menù della segreteria</figcaption>
+                                    </figure>
+                                    <figure class="proj-figure">
+                                        <img class="proj-figure" src="../img/odey_screen2.png" alt="Il calendario che viene generato">
+                                        <figcaption class="proj-figure">Il calendario che viene generato</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" id="neural">
+                        <div class="front">
+                            <span class="project-name">Neural Network<br>Handwritten<br>Number</span>
+                        </div>
+                        <div class="proj-descr">
+                            <p style="text-align-last: center;">
+                                Rete neurale allenata a riconoscere i numeri scritti a mano, con 
+                                la possibilità di essere utilizzata dall'utente.
+                            </p>
+                            <p><span class="highlight">Data:</span> gennaio 2020</p>
+                            <p><span class="highlight">Scritto in</span> Python</p>
+                            <div style="position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%)">
+                                <button class="link-button link-button-bg">Più Informazioni</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="neural-modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="flex">
+                                <div>
+                                    <h5>Neural Network for Handwritten Number</h5>
+                                    <p>
+                                        Il programma implementa la rete neurale descritta e sviluppata da Tariq Rashid nel 
+                                        suo libro "Make Your Own Neural Network". Tale rete neurale è stata allenata per 
+                                        riconoscere i numeri scritti a mano.  
+                                    </p>
+                                    <p>
+                                        La guida di Rashid si limita a realizzare una rete neurale che elabora i dati da un 
+                                        file CSV. Io ho aggiunto un'interfaccia grafica in cui è possibile testare e
+                                        allenare la rete con numeri scritti a mano dall'utente. 
+                                    </p>
+                                    <p>
+                                        Su un data-set di 10.000 test la rete neurale ha raggiunto un'accuratezza del 98%.
+                                    </p>
+                                    <div class="modal-btn">
+                                        <a class="link-button link-button-bg" href="https://gitlab.com/Mirko_de_Cillis/3-layer-neural-network" target="_blank">
+                                            <div>
+                                                <span>Progetto</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <figure class="proj-figure">
+                                        <img class="proj-figure" src="../img/neural_screen.png" alt="Screenshot del programma">
+                                        <figcaption class="proj-figure">Screenshot del programma</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" id="simplecrypto">
+                        <div class="front">
+                            <span class="project-name">SimpleCrypto</span>
+                        </div>
+                        <div class="proj-descr">
+                            <p style="text-align-last: center;">
+                                Simulatore online di investimenti in criptovalute con sezione Community per interagire con gli altri utenti.
+                            </p>
+                            <p><span class="highlight">Data:</span> giugno 2021</p>
+                            <p><span class="highlight">Scritto in</span>
+                                ReactJS, Spring Boot
+                            </p>
+                            <div style="position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%)">
+                                <button class="link-button link-button-bg">Più Informazioni</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="simplecrypto-modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="flex">
+                                <div>
+                                    <h5>SimpleCrypto</h5>
+                                    <p>
+                                        Si tratta dell'elaborato che ho portato agli Esami di Stato. Con questa piattaforma
+                                        è possibile simulare investimenti su alcune criptovalute senza rischiare il proprio
+                                        capitale. Oltre a ciò, ho implementato anche una sezione in cui gli utenti possono
+                                        interagire tra di loro per parlare del proprio andamento o delle crypto più interessanti
+                                        per loro.
+                                    </p>
+                                    <p>
+                                        I valori delle criptovalute sono quelli reali, prelevati dall'API di Binance.<br>
+                                        Il progetto è suddiviso in tre microservizi: il server scritto in Spring Boot, il
+                                        client scritto in React e l'orchestrator in Docker.
+                                    </p>
+                                    <p>
+                                        Per prepare l'elaborato ho avuto l'occasione di studiare e approfondire la tecnologia
+                                        dietro le criptovalute e le blockchain.
+                                    </p>
+                                    <div class="modal-btn">
+                                        <a class="link-button link-button-bg" href="https://github.com/MirkodeCillis/simplecrypto-server" target="_blank">
+                                            <div>
+                                                <span>Lato Server</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="modal-btn" style="margin-top: 20px">
+                                        <a class="link-button link-button-bg" href="https://github.com/MirkodeCillis/simplecrypto-client" target="_blank">
+                                            <div>
+                                                <span>Lato Client</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="modal-btn" style="margin-top: 20px">
+                                        <a class="link-button link-button-bg" href="https://github.com/MirkodeCillis/simplecrypto-orch" target="_blank">
+                                            <div>
+                                                <span>Orchestrator</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="modal-btn" style="margin-top: 20px">
+                                        <a class="link-button link-button-bg" href="../img/elaborato_deCillis.pdf" target="_blank">
+                                            <div>
+                                                <span>Elaborato</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <figure class="proj-figure">
+                                        <img class="proj-figure" src="../img/simplecrypto_screen1.png" alt="Sezione Community">
+                                        <figcaption class="proj-figure">Sezione Community</figcaption>
+                                    </figure>
+                                    <figure class="proj-figure">
+                                        <img class="proj-figure" src="../img/simplecrypto_screen2.png" alt="Visualizzazione del mercato">
+                                        <figcaption class="proj-figure">Visualizzazione del mercato</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="separator"></div>
+            <div class="parallax" id="jobs">
+                <div>
+                    <div>
+                        <h1>ESPERIENZA LAVORATIVA</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <section>
+                <div class="timeline">
+                    <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+                        <div class="timeline__event__icon "></div>
+                        <div class="timeline__event__date">
+                            Luglio 2020 <br>
+                            Settembre 2021
+                        </div>
+                        <div class="timeline__event__content ">
+                            <div class="timeline__event__title">
+                                Overzoom s.r.l.
+                            </div>
+                            <div class="timeline__event__description">
+                                <p>
+                                    <ul>
+                                        <li> Sviluppatore software Front-end con AngularJS.</li>
+                                        <li> Sviluppatore software Back-end con Spring Boot.</li>
+                                        <li> Supporto clienti per problematiche e funzionalità.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+                        <div class="timeline__event__icon">
+
+                        </div>
+                        <div class="timeline__event__date">
+                            ??? ????
+                        </div>
+                        <div class="timeline__event__content">
+                            <div class="timeline__event__title">
+                                Coming Soon
+                            </div>
+                            <div class="timeline__event__description">
+                                <p>Per ora è tutto, ma anche voi potreste fare parte di questa timeline.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div class="contacts">
+                <div>
+                    <div class="contact-links">
+                        <a href="mailto:decillis.web@gmail.com"><div class="icon"><i class="far fa-envelope fa-2x"></i></div></a>
+                        <a href="https://www.instagram.com/mirko_decillis/" target="_blank"><div class="icon"><i class="fab fa-instagram fa-2x"></i></div></a>
+                        <a href="https://t.me/MirkodeCillis" target="_blank"><div class="icon"><i class="fab fa-telegram-plane fa-2x"></i></div></a>
+                        <a href="https://wa.me/393737680998" target="_blank"><div class="icon"><i class="fab fa-whatsapp fa-2x"></i></div></a>
+                        <a href="https://gitlab.com/Mirko_de_Cillis" target="_blank"><div class="icon"><i class="fab fa-gitlab fa-2x"></i></div></a>
+                        <a href="https://www.linkedin.com/in/mirko-de-cillis-9851b11a7/" target="_blank"><div class="icon"><i class="fab fa-linkedin-in fa-2x"></i></div></a>
+                        <div class="contacts-label">Contatti</div>
+                    </div>
+                </div>
+                
+            </div>
+            <section class="footer">
+                <div class="logo" style="user-select: text; -webkit-user-select: text;">mirko de cillis</div>
+                <div class="grid footer">
+                    <div>
+                        <p>Per qualsiasi informazione e richiesta non esistate a contattarmi su:</p>
+                        <div class="contact-links">
+                            <a href="mailto:decillis.web@gmail.com"><div class="icon"><i class="far fa-envelope fa-2x"></i></div></a>
+                            <a href="https://www.instagram.com/mirko_decillis/" target="_blank"><div class="icon"><i class="fab fa-instagram fa-2x"></i></div></a>
+                            <a href="https://t.me/MirkodeCillis" target="_blank"><div class="icon"><i class="fab fa-telegram-plane fa-2x"></i></div></a>
+                            <a href="https://wa.me/393737680998" target="_blank"><div class="icon"><i class="fab fa-whatsapp fa-2x"></i></div></a>
+                            <a href="https://gitlab.com/Mirko_de_Cillis" target="_blank"><div class="icon"><i class="fab fa-gitlab fa-2x"></i></div></a>
+                            <a href="https://www.linkedin.com/in/mirko-de-cillis-9851b11a7/" target="_blank"><div class="icon"><i class="fab fa-linkedin-in fa-2x"></i></div></a>
+                        </div>
+                        <div>
+                            <p>
+                                Il codice sorgente di questo sito è disponibile su 
+                                <a href="https://gitlab.com/Mirko_de_Cillis/myportfolio" target="_blank">Gitlab</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="form">
+                        <form action="#" method="post" id="form-contact">
+                            <div class="form-field">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <label for="email" class="footer">Email</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" name="subject" id="subject" placeholder="Soggetto">
+                                <label for="subject" class="footer">Soggetto</label>
+                            </div>
+                            <div class="form-field" style="margin-top: -1.2em">
+                                <textarea name="object" id="object" placeholder="Oggetto"></textarea>
+                                <label for="object" class="footer">Oggetto</label>
+                            </div>
+                            <input type="submit" value="Invia" class="form-button">
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <script src="../scripts/contacts.js"></script>
+        </div>
+        <div id="loader"></div>
+        <script src="../scripts/switch.js"></script>
+        <script src="../scripts/typecode.js"></script>
+        <script src="../scripts/onscroll.js"></script>
+        <script src="../scripts/onsubmit.js"></script>
+        <script src="../scripts/modal.js"></script>
+    </body>
+</html>
