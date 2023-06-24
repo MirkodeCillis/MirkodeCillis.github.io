@@ -57,7 +57,7 @@
     ------------------ Description ------------------
     ================================================= */
 
-#my-description h5, #my-description p { opacity: 0; }
+#my-introduction h5, #my-introduction p { opacity: 0; }
 .descr-lists div {
     text-align: center;
     width:50%;
@@ -121,14 +121,14 @@ p.descr-lists {
     -------------  come-in transitions --------------
     ================================================= */
 .come-in .photo-container { animation: come-in 1s ease-out forwards; -webkit-animation: come-in 1s ease-out forwards; }
-.come-in #my-description h5,
-.come-in #my-description p {
+.come-in #my-introduction h5,
+.come-in #my-introduction p {
     transform: translateX(110%);
     animation: come-in 1s ease-out forwards;
     -webkit-animation: come-in 1s ease-out forwards;
 }
-.come-in #my-description h5 { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-.come-in #my-description p  { animation-delay:   1s; -webkit-animation-delay:   1s; }
+.come-in #my-introduction h5 { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
+.come-in #my-introduction p  { animation-delay:   1s; -webkit-animation-delay:   1s; }
 
 #icon-grid:nth-child(1)   p { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
 .icon-grid-2:nth-child(1) p { animation-delay:   2s; -webkit-animation-delay:   2s; }

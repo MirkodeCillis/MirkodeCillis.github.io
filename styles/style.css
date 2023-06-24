@@ -393,7 +393,7 @@ h6 {
 /*  =================================================
     ------------------ Description ------------------
     ================================================= */
-#my-description h5, #my-description p {
+#my-introduction h5, #my-introduction p {
   opacity: 0; }
 
 .descr-lists div {
@@ -465,17 +465,17 @@ p.descr-lists {
   animation: come-in 1s ease-out forwards;
   -webkit-animation: come-in 1s ease-out forwards; }
 
-.come-in #my-description h5,
-.come-in #my-description p {
+.come-in #my-introduction h5,
+.come-in #my-introduction p {
   transform: translateX(110%);
   animation: come-in 1s ease-out forwards;
   -webkit-animation: come-in 1s ease-out forwards; }
 
-.come-in #my-description h5 {
+.come-in #my-introduction h5 {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s; }
 
-.come-in #my-description p {
+.come-in #my-introduction p {
   animation-delay: 1s;
   -webkit-animation-delay: 1s; }
 
