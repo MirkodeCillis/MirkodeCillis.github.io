@@ -17,9 +17,9 @@
     ---------------- General Settings ---------------
     ================================================= */
 :root {
-    --black: rgb(32, 32, 32);
-    --white: rgb(236, 236, 236);
-    --primary-light: rgb(83, 134, 134);
+    --black: #{rgb(32, 32, 32)};
+    --white: #{rgb(236, 236, 236)};
+    --primary-light: #{rgb(83, 134, 134)};
     --primary-dark: #59a96a;
     --job-light: #ddd;
     --job-dark: #3b3b3b;
