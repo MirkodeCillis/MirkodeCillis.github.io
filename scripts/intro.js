@@ -89,14 +89,14 @@ intro_title_html.innerHTML = intro_title['title_' + lang];
 intro_div.append(intro_title_html);
 
 intro_content.forEach((content) => {
-    intro_div.innerHTML = intro_div.innerHTML.concat(`
+    intro_div.innerHTML += `
     <p class="grid about-paragraph">
         <i class="fa fa-2x ${content.icon}" aria-hidden="true" style="color: var(--secondary-color)"></i>
         <span>
             ${content[lang]}
         </span>
     </p>
-    `);
+    `;
 });
 
 const intro_languages_title_html = document.createElement('h5');
@@ -106,12 +106,12 @@ const intro_div_grid_lang = document.createElement('div');
 intro_div_grid_lang.className = 'grid about';
 
 intro_languages.forEach(language => {
-    intro_div_grid_lang.innerHTML = intro_div_grid_lang.innerHTML.concat(`
+    intro_div_grid_lang.innerHTML += `
     <div class="tooltip">
         <img src="${language.src}" alt="${language.label}">
         <span class="tooltiptext"> ${language.label}</span>
     </div>
-    `);
+    `;
 });
 
 intro_div.append(intro_div_grid_lang);

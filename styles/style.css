@@ -220,7 +220,7 @@ input::placeholder, textarea::placeholder {
 
 .contact-links {
   display: flex;
-  flex-direction: row-reverse; }
+  flex-direction: row; }
 
 .icon {
   width: 35px;
@@ -1051,6 +1051,7 @@ figure.proj-figure.modal-figure {
     display: block; }
 
   section.footer .contact-links {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; }
