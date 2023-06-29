@@ -437,9 +437,9 @@ p.descr-lists {
   height: 50px; }
 
 .grid.about {
-  grid-template-columns: 33% 33% 33%;
-  width: 90%;
-  margin: auto; }
+  grid-template-columns: repeat(auto-fill, minmax(calc(max(70px, 100%/10)), 1fr));
+  width: 100%;
+  margin: 10px auto; }
 
 .grid.about-2 {
   grid-template-columns: 33% 33% 33%;
@@ -1157,6 +1157,7 @@ span.highlight {
   position: relative; }
 
 h5 {
+  text-align: left;
   color: var(--primary-color);
   font-size: 2em;
   margin: 0 auto;
