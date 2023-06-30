@@ -6,7 +6,6 @@
     min-height: 200px;
     height: 45vh;
 }
-.parallax#projects div { top: calc(50% - 2em); }
 .grid.projects {
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
     grid-gap: 2em;

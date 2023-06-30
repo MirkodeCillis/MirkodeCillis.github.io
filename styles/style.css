@@ -259,7 +259,10 @@ input::placeholder, textarea::placeholder {
     ----------------  #start section ----------------
     ================================================= */
 #start {
-  min-height: 100vh; }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
 
 code {
   position: relative;
@@ -285,8 +288,7 @@ code {
   width: min-content;
   user-select: none;
   -webkit-user-select: none;
-  margin: auto;
-  margin-top: 2em; }
+  margin: auto; }
 
 .link-button {
   user-select: none;
@@ -333,9 +335,6 @@ h6 {
 .parallax#about {
   background-image: url("../img/about.jpg");
   min-height: 500px; }
-
-.parallax#about div {
-  top: calc(50% - 8em); }
 
 .photo-container {
   user-select: none;
@@ -516,9 +515,6 @@ p.descr-lists {
   background-image: url("../img/projects.jpg");
   min-height: 200px;
   height: 45vh; }
-
-.parallax#projects div {
-  top: calc(50% - 2em); }
 
 .grid.projects {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
@@ -752,9 +748,6 @@ figure.proj-figure.modal-figure {
   min-height: 200px;
   height: 45vh; }
 
-.parallax#jobs div {
-  top: calc(50% - 2em); }
-
 .timeline {
   display: flex;
   flex-direction: column;
@@ -976,15 +969,6 @@ figure.proj-figure.modal-figure {
   .parallax div {
     transform: scale(0.9); }
 
-  .parallax#projects div {
-    top: calc(50% - 6em); }
-
-  .parallax#jobs div {
-    top: calc(50% - 6em); }
-
-  .parallax#about div {
-    top: calc(50% - 14em); }
-
   .contacts {
     z-index: 100;
     position: fixed;
@@ -1122,7 +1106,6 @@ body {
 
 section {
   padding: 30px 5%;
-  width: 90%;
   text-align: justify;
   margin: -0.05em auto; }
 
@@ -1146,9 +1129,12 @@ span.highlight {
   background-size: 100% 100%; }
 
 .parallax {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   overflow: hidden;
   margin: -0.05em auto;
-  height: 60vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

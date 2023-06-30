@@ -17,9 +17,6 @@
     .parallax div {
         transform: scale(0.9);
     }
-    .parallax#projects div { top: calc(50% - 6em); }
-    .parallax#jobs div { top: calc(50% - 6em); }
-    .parallax#about div { top: calc(50% - 14em); }
     .contacts {
         z-index: 100;
         position: fixed;

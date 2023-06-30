@@ -39,7 +39,6 @@ body{
 *::selection { color: var(--bg-color); background-color: var(--primary-color);}
 section {
     padding: 30px 5%;
-    width: 90%;
     text-align: justify;
     margin: -0.05em auto;
 }
@@ -61,9 +60,12 @@ span.highlight { color: var(--primary-color); }
     background-size: 100% 100%;
 }
 .parallax {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     overflow: hidden;
     margin: -0.05em auto;
-    height: 60vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
