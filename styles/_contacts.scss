@@ -3,7 +3,8 @@
     ================================================= */
 .contacts-label { display: none; }
 .contacts {
-    position: absolute;
+    z-index: 999;
+    position: fixed;
     right: calc(5% + 100px);
     top: -5px;
 }
