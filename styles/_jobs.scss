@@ -1,329 +1,176 @@
-
-/** Credits to https://codepen.io/hunzaboy/pen/qBWRBXw **/
-$content-width: calc(40vw - 84px);
-$margin: 20px;
-$spacing: 20px;
-$bdrs: 6px;
-$circle-size: 40px;
-$icon-size: 32px;
-$bdrs-icon: 100%;
-
-$color1: #ff568a;
-$color2: #f6a4c3;
-
-$color3: #87bbfe;
-$color4: #555ac0;
-
-$color5: #24b47e;
-$color6: #aff1b6;
-
 .parallax#jobs {
   background-image: url("../img/jobs.png");
   min-height: 200px;
   height: 45vh;
 }
-.timeline {
-  display: flex;
-  flex-direction: column;
-  margin: $margin auto;
+
+/** Credits to https://codepen.io/MarkBoots/pen/OJOqNyB **/
+
+ul#jobs_timeline {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: 70%;
+  margin-inline: auto;
+}
+
+/* line */
+ul#jobs_timeline::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+ul#jobs_timeline li.job_timeline:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+ul#jobs_timeline li.job_timeline {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+ul#jobs_timeline li.job_timeline .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
   position: relative;
 
-  &__event {
-    position: relative;
-    display: flex;
-    margin: $spacing 0;
-    border-radius: $bdrs;
-    align-self: center;
-    width: 50vw;
-
-    &:nth-child(2n + 1) {
-      flex-direction: row-reverse;
-      .timeline__event__date {
-        border-radius: 0 $bdrs $bdrs 0;
-        text-align: right;
-      }
-      .timeline__event__content {
-        border-radius: $bdrs 0 0 $bdrs;
-      }
-
-      .timeline__event__icon {
-        &:before {
-          content: "";
-          width: 2px;
-          height: 100%;
-          background: $color2;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          right: auto;
-          z-index: -1;
-          transform: translateX(-50%);
-          animation: fillTop 2s forwards 4s ease-in-out;
-        }
-        &:after {
-          content: "";
-          width: 100%;
-          height: 2px;
-          background: $color2;
-          position: absolute;
-          right: 0;
-          z-index: -1;
-          top: 50%;
-          left: auto;
-          transform: translateY(-50%);
-          animation: fillLeft 2s forwards 4s ease-in-out;
-        }
-      }
-    }
-
-    &__title {
-      font-size: 1.2rem;
-      line-height: 1.4;
-      text-transform: uppercase;
-
-      font-weight: 600;
-      color: $color1;
-      letter-spacing: 1.5px;
-    }
-    &__content {
-      padding: $spacing;
-      background: var(--job-bg);
-      width: $content-width;
-      border-radius: 0 $bdrs $bdrs 0;
-    }
-    &__date {
-      color: $color2;
-      font-size: 1.5rem;
-      font-weight: 600;
-      background: $color1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      padding: 0 $spacing;
-      border-radius: $bdrs 0 0 $bdrs;
-    }
-    &__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $color1;
-      padding: $spacing;
-      align-self: center;
-      margin: 0 $spacing;
-      background: $color2;
-      border-radius: $bdrs-icon;
-      width: $circle-size;
-      height: $circle-size;
-      position: relative;
-
-      i {
-        font-size: $icon-size;
-      }
-
-      &:before {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: $color2;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out;
-      }
-      &:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: $color2;
-        position: absolute;
-        left: 0;
-        z-index: -1;
-        top: 50%;
-        transform: translateY(-50%);
-        animation: fillLeftOdd 2s forwards 4s ease-in-out;
-      }
-    }
-    &__description {
-      flex-basis: 60%;
-    }
-
-    &--type2 {
-      &:after {
-        background: $color4;
-      }
-      .timeline__event__date {
-        color: $color3;
-        background: $color4;
-      }
-
-      &:nth-child(2n + 1) {
-        .timeline__event__icon {
-          &:before,
-          &:after {
-            background: $color3;
-          }
-        }
-      }
-
-      .timeline__event__icon {
-        background: $color3;
-        color: $color4;
-        &:before,
-        &:after {
-          background: $color3;
-        }
-      }
-      .timeline__event__title {
-        color: $color4;
-      }
-      .timeline__event__title {
-      }
-    }
-
-    &--type3 {
-      &:after {
-        background: $color5;
-      }
-      .timeline__event__date {
-        color: $color6;
-        background-color: $color5;
-      }
-
-      &:nth-child(2n + 1) {
-        .timeline__event__icon {
-          &:before,
-          &:after {
-            background: $color6;
-          }
-        }
-      }
-
-      .timeline__event__icon {
-        background: $color6;
-        color: $color5;
-        &:before,
-        &:after {
-          background: $color6;
-        }
-      }
-      .timeline__event__title {
-        color: $color5;
-      }
-      .timeline__event__title {
-      }
-    }
-    &:last-child {
-      .timeline__event__icon {
-        &:before {
-          content: none;
-        }
-      }
-    }
-  }
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-@media (max-width: 786px) {
-  .timeline__event {
-    &:first-child {
-      & .timeline__event__icon:after {
-        display: none;
-      }
+/* date flap */
+ul#jobs_timeline li.job_timeline .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
 
-    }
-    &:last-child {
-      .timeline__event__icon {
-        &:before {
-          content: "";
-        }
-      }
-    }
-  }
-
-  .timeline__event {
-    flex-direction: column;
-    align-self: center;
-    margin-top: 0;
-    width: auto;
-    &__content {
-      width: 100%;
-      margin-left: -20px;
-    }
-
-    &__icon {
-      margin: 40px 20px;
-      &:before {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: $color2;
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        left: 50%;
-        top: auto;
-        transform: translateX(-50%);
-        animation: fillBottom 2s forwards 4s ease-in-out;
-      }
-      &:after {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: $color2;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out;
-      }
-    }
-    &__date {
-      width: 100%;
-      margin-left: -20px;
-      border-radius: 6px 6px 0 0;
-      padding: $spacing;
-    }
-
-    &:nth-child(2n + 1) {
-      flex-direction: column;
-      align-self: center;
-
-      .timeline__event__date {
-        border-radius: 0;
-        padding: $spacing;
-      }
-
-      //.timeline__event__icon {
-      //  border-radius: $bdrs $bdrs 0 0;
-      //  margin: 0;
-      //}
-    }
-  }
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
 }
 
-@keyframes fillLeft {
-  100% {
-    right: 100%;
-  }
+/* circle */
+ul#jobs_timeline li.job_timeline .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bg-color);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  transition: all 0.6s linear;
+  -webkit-transition: all 0.6s linear;
 }
 
-@keyframes fillTop {
-  100% {
-    top: 100%;
-  }
+/* title descr */
+ul#jobs_timeline li.job_timeline .title,
+ul#jobs_timeline li.job_timeline .descr {
+  background: var(--bg-color);
+  position: relative;
+  padding-inline: 1.5rem;
+  transition: all 0.6s linear;
+  -webkit-transition: all 0.6s linear;
+}
+ul#jobs_timeline li.job_timeline .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+ul#jobs_timeline li.job_timeline .descr {
+  padding-block-end: 1.5rem;
 }
 
-@keyframes fillBottom {
-  100% {
-    bottom: 100%;
-  }
+/* shadows */
+ul#jobs_timeline li.job_timeline .title::before,
+ul#jobs_timeline li.job_timeline .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+ul#jobs_timeline li.job_timeline .title::before {
+  bottom: calc(100% + 0.125rem);
 }
 
-@keyframes fillLeftOdd {
-  100% {
-    left: 100%;
+ul#jobs_timeline li.job_timeline .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+li.job_timeline li {
+  list-style: disc;
+}
+
+@media (min-width: 40rem) {
+  ul#jobs_timeline {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul#jobs_timeline::before {
+    grid-column: 2;
+  }
+  ul#jobs_timeline li.job_timeline:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul#jobs_timeline li.job_timeline:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  ul#jobs_timeline li.job_timeline:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }

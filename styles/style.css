@@ -742,210 +742,157 @@ figure.proj-figure.modal-figure {
   animation: come-in .6s ease-out forwards;
   -webkit-animation: come-in .6s ease-out forwards; }
 
-/** Credits to https://codepen.io/hunzaboy/pen/qBWRBXw **/
 .parallax#jobs {
   background-image: url("../img/jobs.png");
   min-height: 200px;
   height: 45vh; }
 
-.timeline {
-  display: flex;
-  flex-direction: column;
-  margin: 20px auto;
-  position: relative; }
-  .timeline__event {
-    position: relative;
-    display: flex;
-    margin: 20px 0;
-    border-radius: 6px;
-    align-self: center;
-    width: 50vw; }
-    .timeline__event:nth-child(2n + 1) {
-      flex-direction: row-reverse; }
-      .timeline__event:nth-child(2n + 1) .timeline__event__date {
-        border-radius: 0 6px 6px 0;
-        text-align: right; }
-      .timeline__event:nth-child(2n + 1) .timeline__event__content {
-        border-radius: 6px 0 0 6px; }
-      .timeline__event:nth-child(2n + 1) .timeline__event__icon:before {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: #f6a4c3;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        right: auto;
-        z-index: -1;
-        transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out; }
-      .timeline__event:nth-child(2n + 1) .timeline__event__icon:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: #f6a4c3;
-        position: absolute;
-        right: 0;
-        z-index: -1;
-        top: 50%;
-        left: auto;
-        transform: translateY(-50%);
-        animation: fillLeft 2s forwards 4s ease-in-out; }
-    .timeline__event__title {
-      font-size: 1.2rem;
-      line-height: 1.4;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #ff568a;
-      letter-spacing: 1.5px; }
-    .timeline__event__content {
-      padding: 20px;
-      background: var(--job-bg);
-      width: calc(40vw - 84px);
-      border-radius: 0 6px 6px 0; }
-    .timeline__event__date {
-      color: #f6a4c3;
-      font-size: 1.5rem;
-      font-weight: 600;
-      background: #ff568a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      padding: 0 20px;
-      border-radius: 6px 0 0 6px; }
-    .timeline__event__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ff568a;
-      padding: 20px;
-      align-self: center;
-      margin: 0 20px;
-      background: #f6a4c3;
-      border-radius: 100%;
-      width: 40px;
-      height: 40px;
-      position: relative; }
-      .timeline__event__icon i {
-        font-size: 32px; }
-      .timeline__event__icon:before {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: #f6a4c3;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out; }
-      .timeline__event__icon:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: #f6a4c3;
-        position: absolute;
-        left: 0;
-        z-index: -1;
-        top: 50%;
-        transform: translateY(-50%);
-        animation: fillLeftOdd 2s forwards 4s ease-in-out; }
-    .timeline__event__description {
-      flex-basis: 60%; }
-    .timeline__event--type2:after {
-      background: #555ac0; }
-    .timeline__event--type2 .timeline__event__date {
-      color: #87bbfe;
-      background: #555ac0; }
-    .timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:before, .timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:after {
-      background: #87bbfe; }
-    .timeline__event--type2 .timeline__event__icon {
-      background: #87bbfe;
-      color: #555ac0; }
-      .timeline__event--type2 .timeline__event__icon:before, .timeline__event--type2 .timeline__event__icon:after {
-        background: #87bbfe; }
-    .timeline__event--type2 .timeline__event__title {
-      color: #555ac0; }
-    .timeline__event--type3:after {
-      background: #24b47e; }
-    .timeline__event--type3 .timeline__event__date {
-      color: #aff1b6;
-      background-color: #24b47e; }
-    .timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:before, .timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:after {
-      background: #aff1b6; }
-    .timeline__event--type3 .timeline__event__icon {
-      background: #aff1b6;
-      color: #24b47e; }
-      .timeline__event--type3 .timeline__event__icon:before, .timeline__event--type3 .timeline__event__icon:after {
-        background: #aff1b6; }
-    .timeline__event--type3 .timeline__event__title {
-      color: #24b47e; }
-    .timeline__event:last-child .timeline__event__icon:before {
-      content: none; }
+/** Credits to https://codepen.io/MarkBoots/pen/OJOqNyB **/
+ul#jobs_timeline {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: 70%;
+  margin-inline: auto; }
 
-@media (max-width: 786px) {
-  .timeline__event:first-child .timeline__event__icon:after {
-    display: none; }
-  .timeline__event:last-child .timeline__event__icon:before {
-    content: ""; }
+/* line */
+ul#jobs_timeline::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: #e1e1e1;
+  border-radius: calc(var(--line-w) / 2); }
 
-  .timeline__event {
-    flex-direction: column;
-    align-self: center;
-    margin-top: 0;
-    width: auto; }
-    .timeline__event__content {
-      width: 100%;
-      margin-left: -20px; }
-    .timeline__event__icon {
-      margin: 40px 20px; }
-      .timeline__event__icon:before {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: #f6a4c3;
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        left: 50%;
-        top: auto;
-        transform: translateX(-50%);
-        animation: fillBottom 2s forwards 4s ease-in-out; }
-      .timeline__event__icon:after {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: #f6a4c3;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out; }
-    .timeline__event__date {
-      width: 100%;
-      margin-left: -20px;
-      border-radius: 6px 6px 0 0;
-      padding: 20px; }
-    .timeline__event:nth-child(2n + 1) {
-      flex-direction: column;
-      align-self: center; }
-      .timeline__event:nth-child(2n + 1) .timeline__event__date {
-        border-radius: 0;
-        padding: 20px; } }
-@keyframes fillLeft {
-  100% {
-    right: 100%; } }
-@keyframes fillTop {
-  100% {
-    top: 100%; } }
-@keyframes fillBottom {
-  100% {
-    bottom: 100%; } }
-@keyframes fillLeftOdd {
-  100% {
-    left: 100%; } }
+/* columns*/
+/* row gaps */
+ul#jobs_timeline li.job_timeline:not(:last-child) {
+  margin-bottom: var(--row-gap); }
+
+/* card */
+ul#jobs_timeline li.job_timeline {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content; }
+
+/* date */
+ul#jobs_timeline li.job_timeline .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  position: relative;
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2); }
+
+/* date flap */
+ul#jobs_timeline li.job_timeline .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0; }
+
+/* circle */
+ul#jobs_timeline li.job_timeline .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bg-color);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  transition: all 0.6s linear;
+  -webkit-transition: all 0.6s linear; }
+
+/* title descr */
+ul#jobs_timeline li.job_timeline .title,
+ul#jobs_timeline li.job_timeline .descr {
+  background: var(--bg-color);
+  position: relative;
+  padding-inline: 1.5rem;
+  transition: all 0.6s linear;
+  -webkit-transition: all 0.6s linear; }
+
+ul#jobs_timeline li.job_timeline .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 1.5em; }
+
+ul#jobs_timeline li.job_timeline .descr {
+  padding-block-end: 1.5rem; }
+
+/* shadows */
+ul#jobs_timeline li.job_timeline .title::before,
+ul#jobs_timeline li.job_timeline .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%); }
+
+ul#jobs_timeline li.job_timeline .title::before {
+  bottom: calc(100% + 0.125rem); }
+
+ul#jobs_timeline li.job_timeline .descr::before {
+  z-index: -1;
+  bottom: 0.25rem; }
+
+li.job_timeline li {
+  list-style: disc; }
+
+@media (min-width: 40rem) {
+  ul#jobs_timeline {
+    grid-template-columns: 1fr var(--line-w) 1fr; }
+
+  ul#jobs_timeline::before {
+    grid-column: 2; }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) {
+    grid-column: 1; }
+
+  ul#jobs_timeline li.job_timeline:nth-child(even) {
+    grid-column: 3; }
+
+  /* start second card */
+  ul#jobs_timeline li.job_timeline:nth-child(2) {
+    grid-row: 2/4; }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0; }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2); }
+
+  ul#jobs_timeline li.job_timeline:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0; } }
 /*  =================================================
     -------------- Responsive Settings --------------
     ================================================= */
