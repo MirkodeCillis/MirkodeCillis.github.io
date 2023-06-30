@@ -94,9 +94,9 @@ p.descr-lists {
     z-index: 1;
 }
 .tooltip:hover .tooltiptext { opacity: 1; }
-.tooltip img { height: 50px; }
+.tooltip img { height: 60px; }
 .grid.about {
-    grid-template-columns: repeat(auto-fill, minmax(calc(max(70px, 100%/10)), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     width: 100%;
     margin: 10px auto;
 }

@@ -1,8 +1,8 @@
 const intro_title = {
     title_it: 'Mi presento',
     title_en: 'Let me introduce myself',
-    languages_it: 'Linguaggi e framework che conosco',
-    languages_en: 'Programming languages and frameworks I know'
+    languages_it: 'Tecnologie che conosco',
+    languages_en: 'Technologies I know'
 }
 const intro_content = [
     {
@@ -38,28 +38,40 @@ const intro_content = [
 
 const intro_languages = [
     {
-        src: './img/icons/html.svg',
-        label: 'HTML'
+        src: './img/icons/web_dev.png',
+        label: 'Sviluppo Web'
     },
     {
-        src: './img/icons/css.svg',
-        label: 'CSS'
-    },
-    {
-        src: './img/icons/js.svg',
-        label: 'JavaScript'
-    },
-    {
-        src: './img/icons/java.svg',
-        label: 'Java'
+        src: './img/icons/typescript.svg',
+        label: 'TypeScript'
     },
     {
         src: './img/icons/clanguage.svg',
         label: 'C'
     },
     {
+        src: './img/icons/java.svg',
+        label: 'Java'
+    },
+    {
+        src: './img/icons/spring.svg',
+        label: 'Spring'
+    },
+    {
         src: './img/icons/nodejs.svg',
         label: 'NodeJS'
+    },
+    {
+        src: './img/icons/angular.svg',
+        label: 'Angular'
+    },
+    {
+        src: './img/icons/react.svg',
+        label: 'React'
+    },
+    {
+        src: './img/icons/git.svg',
+        label: 'Git'
     },
     {
         src: './img/icons/mysql.svg',
@@ -70,16 +82,12 @@ const intro_languages = [
         label: 'MongoDB'
     },
     {
-        src: './img/icons/spring.svg',
-        label: 'Spring'
+        src: './img/icons/nginx.svg',
+        label: 'NginX'
     },
     {
-        src: './img/icons/angularjs.svg',
-        label: 'AngularJS'
-    },
-    {
-        src: './img/icons/react.svg',
-        label: 'React'
+        src: './img/icons/docker.svg',
+        label: 'Docker'
     },
 ];
 
