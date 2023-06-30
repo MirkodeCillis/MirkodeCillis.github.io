@@ -7,6 +7,7 @@ const jobs = [
             to_en: 'June 2023'
         },
         company: 'Overzoom S.r.l.',
+        role: 'Full Stack Developer',
         color: '#FF568A',
         skills_it: [
             'Sviluppatore software Front-end con AngularJS',
@@ -27,6 +28,7 @@ const jobs = [
             to_en: 'Current'
         },
         company: 'Sabanet S.r.l.',
+        role: 'Full Stack Developer',
         color: '#2BBBA1',
         skills_it: [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -48,7 +50,8 @@ const jobs = [
             from_en: '????',
             to_en: '????'
         },
-        company: 'Coming soon',
+        company: '',
+        role: 'Coming soon',
         color: '#555ac0',
         skills_it: [
             'Per ora è tutto, ma ci saranno aggiornamenti.'
@@ -72,7 +75,10 @@ jobs.forEach((job, index) => {
     timeline_container.innerHTML += `
     <li class="job_timeline" style="--accent-color: ${job.color}">
         <div class="date">${job.time['from_' + lang]} - ${job.time['to_' + lang]}</div>
-        <div class="title">${job.company}</div>
+        <div class="title" > 
+            <span class="company">${job.company}</span>
+            <span class="role"> ${job.role} </span> 
+        </div>
         <div class="descr">
             <ul>
                 ${skills_list}

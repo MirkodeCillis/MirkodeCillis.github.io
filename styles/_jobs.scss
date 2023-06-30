@@ -110,7 +110,14 @@ ul#jobs_timeline li.job_timeline .title {
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: bold;
+}
+ul#jobs_timeline li.job_timeline .title .role {
+  display: block;
   font-size: 1.5em;
+}
+ul#jobs_timeline li.job_timeline .title .company {
+  display: block;
+  font-size: 1em;
 }
 ul#jobs_timeline li.job_timeline .descr {
   padding-block-end: 1.5rem;
