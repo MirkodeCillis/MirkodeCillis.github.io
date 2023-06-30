@@ -24,12 +24,23 @@ header{
 }
 
 .lang-container {
-    height: 100%;
+    height: calc(100% + 5px);;
+    display: flex;
+    flex-direction: column;
 }
 .lang-container * { margin: auto; }
 .lang-container img {
     width: 2.5em;
-    padding: 5px 20px;
+    padding: 5px 25px;
+}
+.lang-container i {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 5px 25px;
+}
+.lang-container i:hover {
+    color: white;
+    -webkit-filter: drop-shadow(0 0 0.5px white);
+    filter: drop-shadow(0 0 0.5px white);
 }
 .lang-container ul {
     border: 1px solid #404040;
