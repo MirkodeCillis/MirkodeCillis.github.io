@@ -1,3 +1,6 @@
 vendor/
 .idea
 styles/.sass-cache
+styles/package.json
+styles/package-lock.json
+styles/node_modules
