@@ -67,6 +67,7 @@ header{
 section.footer{
     color: var(--white);
     align-items: center;
+    text-align: center;
     min-height: 25vh;
     background-color: #3b3b3b;
 }
@@ -75,11 +76,6 @@ section.footer .logo {
     font-size: 25px; 
     line-height: 30px;
     letter-spacing: 2px;
-}
-
-.grid.footer {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: auto 0;
 }
 
 section.footer *::selection { background-color: var(--white); color: #3b3b3b; }
