@@ -7,27 +7,23 @@ const intro_title = {
 const intro_content = [
     {
         icon: 'fa-university',
-        it: 'Mi chiamo Mirko de Cillis, vengo da Trani e mi sono diplomato come <span class="highlight">perito informatico</span>\n' +
-            'all\'ITIS "Jannuzzi" di Andria. Il voto finale? Non mi interessa, ma per vostra conoscenza,\n' +
-            'è 100. Attualmente frequente il Corso di Laurea Triennale in <span class="highlight">Ingegneria Gestionale</span>\n' +
-            'Politecnico di Bari.',
-        en: 'Mi chiamo Mirko de Cillis, vengo da Trani e mi sono diplomato come <span class="highlight">perito informatico</span>\n' +
-            'all\'ITIS "Jannuzzi" di Andria. Il voto finale? Non mi interessa, ma per vostra conoscenza,\n' +
-            'è 100. Attualmente frequente il Corso di Laurea Triennale in <span class="highlight">Ingegneria Gestionale</span>\n' +
-            'Politecnico di Bari.'
+        it: 'Mi chiamo Mirko de Cillis, vengo da Trani e mi sono diplomato come <span class="highlight">perito informatico</span> ' +
+            'all\'ITIS "Jannuzzi" di Andria nel 2021. Attualmente frequento l\'ultimo anno del Corso di Laurea Triennale in ' +
+            '<span class="highlight">Ingegneria Gestionale</span> al Politecnico di Bari.',
+        en: 'My name is Mirko de Cillis, I\'m from Trani I got an <span class="highlight">high school diploma in IT</span> in 2021. ' +
+            'I am currently attendining the final year of the Bachelor\'s Degree in <span class="highlight">Management Engineering</span>' +
+            'at the Politecnico di Bari University.'
     },
     {
         icon: 'fa-dumbbell',
-        it: 'Non mi fermo solo allo studio: ho ben altre passioni!\n' +
-            'Primo fra tutte, l\'<span class="highlight">allenamento</span> è la cosa più importante per me: mi aiuta a scaricare la\n' +
-            'tensione tra studio e lavoro e mi fa sentire anche più energico. Sono stato un pugile\n' +
-            'agonista iscritto alla <span class="highlight">Federazione Pugilistica Italiana</span>, purtroppo senza mai aver disputato\n' +
-            'incontri (il mio pugile preferito? Rocky Marciano :D).',
-        en: 'Non mi fermo solo allo studio: ho ben altre passioni!\n' +
-            'Primo fra tutte, l\'<span class="highlight">allenamento</span> è la cosa più importante per me: mi aiuta a scaricare la\n' +
-            'tensione tra studio e lavoro e mi fa sentire anche più energico. Sono stato un pugile\n' +
-            'agonista iscritto alla <span class="highlight">Federazione Pugilistica Italiana</span>, purtroppo senza mai aver disputato\n' +
-            'incontri (il mio pugile preferito? Rocky Marciano :D).'
+        it: 'Una cosa molto importante per me è lo <span class="highlight">sport</span>: mi aiuta a scaricare la ' +
+            'tensione tra studio e lavoro e mi fa sentire anche più energico. Nel cuore avrò sempre la <span class="highlight">boxe</span>: ' +
+            'sono stato un pugile agonista nel 2021, purtroppo senza mai aver disputato incontri. ' +
+            'Al momento mi sto avvicinando al <span class="highlight">powerlifting</span>, un\'altra disciplina che mi piace molto.',
+        en: '<span class="highlight">Sport</span> is very important to me: it helps me to relieve tension built up between study and work, ' +
+            'and it makes me feel more energetic. A sport that will always find a place in my heart is <span class="highlight">boxe</span>: ' +
+            'I was a boxer in 2021, even though I have never fought officially. ' +
+            'Nowadays, I\'m discovering <span class="highlight">powerlifting</span>, another sport I really like.'
     },
     {
         icon: 'fa-line-chart',

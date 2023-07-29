@@ -394,7 +394,7 @@ h6 {
     ================================================= */
 .parallax#about {
   background-image: url("../img/about.jpg");
-  min-height: 500px;
+  height: 100vh;
 }
 
 .photo-container {
