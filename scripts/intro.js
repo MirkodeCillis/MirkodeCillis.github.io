@@ -27,21 +27,23 @@ const intro_content = [
     },
     {
         icon: 'fa-line-chart',
-        it: 'Sono uno sempre disposto a crescere e a <span class="highlight">imparare di continuo</span>, spesso e volentieri in più\n' +
-            'settori. Sono anche un appassionato di criptovalute e di <span class="highlight">investimenti</span>: la finanza\n' +
-            'decentralizzata è stata il tema che ho portato agli Esami di Stato e continuo a seguire l\'argomento.',
-        en: 'Sono uno sempre disposto a crescere e a <span class="highlight">imparare di continuo</span>, spesso e volentieri in più\n' +
-            'settori. Sono anche un appassionato di criptovalute e di <span class="highlight">investimenti</span>: la finanza\n' +
-            'decentralizzata è stata il tema che ho portato agli Esami di Stato e continuo a seguire l\'argomento.'
+        it: 'Sono anche un appassionato di <span class="highlight">finanza</span>: ' +
+            'nel tempo libero gestico un piccolo portafoglio in cui ho riposto una parte dei miei risparmi.',
+        en: 'I\'m also keen on <span class="highlight">finance</span>: in the free time I manage a little investment portfolio ' +
+            'where I store a part of my savings.'
     },
     {
         icon: 'fa-lightbulb-o',
-        it: 'Nonostante non abbia molta esperienza nel settore alle spalle, ho sempre svolto tutti i miei\n' +
+        it: 'Se dovessi descrivermi con tre aggettivi - sperando di non risultare arrogante in questo -, direi che questi sarebbero: ' +
+            '<span class="highlight">empatico</span>, <span class="highlight">organizzato</span>, <span class="highlight">razionale</span>. ' +
+            'Nonostante non abbia molta esperienza nel settore alle spalle, ho sempre svolto tutti i miei\n' +
             'compiti con il <span class="highlight"> massimo impegno</span>, per ottenere sempre la soluzione migliore. Adoro le sfide\n' +
             'e mi piace approfondire un argomento fino a quando non mi reputo soddifatto del\n' +
             'risultato ottenuto; quando mi viene assegnato un compito faccio di\n' +
             'tutto pur di portarlo al termine e ottenere la <span class="highlight"> soluzione migliore</span>.',
-        en: 'Nonostante non abbia molta esperienza nel settore alle spalle, ho sempre svolto tutti i miei\n' +
+        en: 'Se dovessi descrivermi con tre aggettivi - sperando di non risultare arrogante in questo -, direi che questi sarebbero: ' +
+            '<span class="highlight">empatico</span>, <span class="highlight">organizzato</span>, <span class="highlight">razionale</span>. ' +
+            'Nonostante non abbia molta esperienza nel settore alle spalle, ho sempre svolto tutti i miei\n' +
             'compiti con il <span class="highlight"> massimo impegno</span>, per ottenere sempre la soluzione migliore. Adoro le sfide\n' +
             'e mi piace approfondire un argomento fino a quando non mi reputo soddifatto del\n' +
             'risultato ottenuto; quando mi viene assegnato un compito faccio di\n' +
